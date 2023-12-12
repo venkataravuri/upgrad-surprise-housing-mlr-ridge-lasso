@@ -1,2 +1,1 @@
-# upgrad-surprise-housing-mlr-ridge-lasso
-Upgrad Multivariate Linear Regression Regularization Assignment
+# UpGrad Multivariate Linear Regression Regularization Assignment
