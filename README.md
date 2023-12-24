@@ -1,53 +1,72 @@
-# UpGrad Multivariate Linear Regression Regularization Assignment
+# UpGrad - Advanced Regression - Regularization Assignment
 
-# Project Name
-> Outline a brief description of your project.
+### Problem Statement
+A US-based housing company named Surprise Housing has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual values and flip them on at a higher price. For the same purpose, the company has collected a data set from the sale of houses in Australia. The company is looking at prospective properties to buy to enter the market. You are required to build a regression model using regularisation in order to predict the actual value of the prospective properties and decide whether to invest in them or not.
+
+The company wants to know:
+
+- Which variables are significant in predicting the price of a house, and
+- How well those variables describe the price of a house.
+
+Also, **determine the optimal value of lambda for ridge and lasso regression**.
 
 ## Table of Contents
-* [General Info](#general-information)
+* [Dataset Overview](#dataset-overview)
+* [EDA Analysis](#data-analysis)
+* [Model Buidling & Evaluation](#model-buidling--evaluation)
 * [Technologies Used](#technologies-used)
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
 <!-- You can include any other section that is pertinent to your problem -->
 
-## General Information
-- Provide general information about your project here.
-- What is the background of your project?
-- What is the business probem that your project is trying to solve?
-- What is the dataset that is being used?
+## Dataset Overview
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+The Australian housing market dataset has 79 features. Which includes both numerical, categorical (ordinal and nominal features).
+
+One hot encoding of categorical features expands features to 230+
+
+### Data Analysis
+
+The multivariate analysis on numerical features indicates few features are  
+
+
+## Model Buidling & Evaluation
+
+The dataset has been fit to Sklearn's Linear Regression model, the evaluation results indicates high variance on test dataset. This indicates model overfitted to of train dataset.
+
+To regularize the model, Lasso & Ridge regression is applied. The results indicates stable R2 Score.
 
 ## Conclusions
-- Conclusion 1 from the analysis
-- Conclusion 2 from the analysis
-- Conclusion 3 from the analysis
-- Conclusion 4 from the analysis
 
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+Multivariate linear regression on dataset indicates signs of multicollinearity – i.e. many predictor variables are highly correlated to each other.
 
+This is causing the coefficient estimates of the model to be unreliable and have high variance. When the model is applied on unseen data, it is performing poorly. 
+
+After applying ridge regression and lasso regression, we noted high ALPHA value. The shrinkage penalty (λ) approaches infinity, the shrinkage penalty becomes more influential and the predictor variables that aren’t important in the model shrink towards zero. 
+
+### Ridge vs. Lasso Regression 
+
+After performing k-fold cross-validation, we choose model that produces the lowest test mean squared error. In this case, Lasso Regression has lowest MSE error.
+
+Lasso regression tends to perform better here as small number of predictor variables are significant, it’s able to shrink insignificant variables completely to zero and remove them from the model. 
 
 ## Technologies Used
-- library - version 1.0
-- library - version 2.0
-- library - version 3.0
 
-<!-- As the libraries versions keep on changing, it is recommended to mention the version of library used in this project -->
+The model has been built as `Jupyter Notebook` using python. It uses following Python libraries,
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
+- seaborn
+- statsmodels
+- jinja2
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- References if any...
-- This project was based on [this tutorial](https://www.example.com).
-
+- Stackoverflow
+- Scikit-Learn
+- Upgrade Material
 
 ## Contact
-Created by [@githubusername] - feel free to contact me!
+Created by [@venkataravuri] - feel free to contact me!
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
