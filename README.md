@@ -18,8 +18,6 @@ Also, **determine the optimal value of lambda for ridge and lasso regression**.
 * [Conclusions](#conclusions)
 * [Acknowledgements](#acknowledgements)
 
-<!-- You can include any other section that is pertinent to your problem -->
-
 ## Dataset Overview
 
 The Australian housing market dataset has 79 features. Which includes both numerical, categorical (ordinal and nominal features).
